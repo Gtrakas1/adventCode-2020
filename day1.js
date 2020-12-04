@@ -6,20 +6,31 @@ const list = [1650, 1174, 1156, 1874, 1958, 1918, 1980, 1588, 1863, 1656, 1843, 
     1872, 1261, 1137, 1978, 1537, 1897, 1837, 1753, 1913]
 
 function FindSum(expense) {
-    let totalExpense = 0;
     for (let i = 0; i < expense.length; i++) {
-        for (let j = 0; j < expense.length; i++) {
+        for (let j = 0; j < expense.length; j++) {
             if (expense[i] + expense[j] === 2020) {
-                {
-                    totalExpense += expense[i] * expense[j]
-                    return totalExpense;
-                }
+
+                return (expense[i] * expense[j])
             }
 
         }
     }
-    return false;
+}
+function FindSum2(expense) {
+    for (let i = 0; i < expense.length; i++) {
+        for (let j = 0; j < expense.length; j++) {
+            for (let k = 0; k < expense.length; k++) {
+                if (expense[i] + expense[j] + expense[k] === 2020) {
+
+                    return (expense[i] * expense[j] * expense[k])
+                }
+
+
+            }
+
+        }
+    }
 }
 
-
-console.log(FindSum(list))
+FindSum(list)
+FindSum2(list)
